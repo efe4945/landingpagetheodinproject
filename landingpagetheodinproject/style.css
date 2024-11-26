@@ -17,6 +17,7 @@
     --hero-secondary-txt-size: 18px;
     --hero-secondary-txt-color: #E5E7EB;
     --navbar-txt-size: 38px;
+    --navbar-table-txt-size: 28px;
     --navbar-txt-color: #E5E7EB;
     --logo-font-size: 48px;
     --logo-color: #F9FAF8;
@@ -258,6 +259,31 @@ nav ul a {
 }
 nav ul li:hover, nav ul li:active {
     background: hsla(220, 13%, 91%, 0.637);
+    
+}
+@media screen and (min-width: 768px) {
+    nav {
+        gap: 1rem;
+    }
+    nav ul {
+        justify-content: space-between;
+    }
+    nav ul li a {
+        font-size: var(--navbar-table-txt-size);
+    }
+    section .hero-colum{
+        
+    flex-flow: column wrap;
+    
+        
+    }
+    .hero-main-txt-wrapper, .hero-box {
+        max-width: 100%;
+
+    }
+    .cto-bottom {
+        text-align: center;
+    }
     
 }
 
