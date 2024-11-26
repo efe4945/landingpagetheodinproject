@@ -12,14 +12,17 @@
     --font-family: "Roboto", serif;
     --header-footer-dark-bg: #1F2937;
     --hero-main-txt-font-size: 38px;
+    --hero-main-desktop-txt-font-size: 48px;
     --hero-main-txt-color: #F9FAF8;
     --hero-main-txt-weight: 900;
     --hero-secondary-txt-size: 18px;
     --hero-secondary-txt-color: #E5E7EB;
     --navbar-txt-size: 38px;
     --navbar-table-txt-size: 28px;
+    --navbar-desktop-txt-size: 18px;
     --navbar-txt-color: #E5E7EB;
     --logo-font-size: 48px;
+    --logo-desktop-font-size: 24px;
     --logo-color: #F9FAF8;
     --button-color: #3882F6;
     --cto-bg-color: #3882F6;
@@ -128,6 +131,7 @@ nav ul a {
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
+    
     
 }
 .hero-main-txt-wrapper {
@@ -272,8 +276,10 @@ nav ul li:hover, nav ul li:active {
         font-size: var(--navbar-table-txt-size);
     }
     section .hero-colum{
-        
+    padding: 0;    
     flex-flow: column wrap;
+    width: 100%;
+    margin: 2.5rem 0 4rem 0;
     
         
     }
@@ -285,5 +291,83 @@ nav ul li:hover, nav ul li:active {
         text-align: center;
     }
     
+}
+@media screen and (min-width: 1280px) {
+    nav section p {
+        color: var(--logo-color);
+        font-size: var(--logo-desktop-font-size);
+    }
+    nav ul li a {
+        font-size: var(--navbar-desktop-txt-size);
+        
+    }
+    nav section {
+        flex: 1 1 30%;
+        justify-content: space-between;
+    
+    }
+    nav ul {
+        flex: 1 1 58%;
+    
+    }
+    nav ul {
+        justify-content: end;
+        gap: 1rem;
+    }
+    section .hero-colum{
+        padding: 0;    
+        flex-flow: row wrap;
+        width: 100%;
+        gap: 3rem;
+        }
+    section .hero-colum .hero-main-txt-wrapper{
+        flex:1 1 40%;
+               
+            }
+    section .hero-colum .hero-box{
+        flex:1 1 40%;
+               
+            }
+    .hero-main-txt p {
+        text-align: start;
+        font-size: var(--hero-main-desktop-txt-font-size);
+                
+        }
+        .hero-main-txt-wrapper {
+            gap: .5rem;
+        }
+        .secondary-txt p {
+            font-size: var(--navbar-desktop-txt-size);
+            max-width: 80%;
+        }
+        .secondary-txt button {
+            max-width: 30%;
+            padding: .7rem 0;
+
+        }
+        .info-kid-list-flex {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        .qt-padding figure{
+            max-width: 70%;
+            margin: 0 auto;
+        }
+        .info-kid-list-flex {
+        
+            justify-content: space-between;
+        }
+        .cto-flex-dad section {
+            flex: 1 1 50%;
+            
+        }
+        .cto-flex-dad .button-wrapper {
+            max-width: 20%;
+        }
+        .cto-head, .cto-bottom {
+            text-align: start;
+        }
+
+        
 }
 
